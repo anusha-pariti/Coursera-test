@@ -1,94 +1,84 @@
-* {
-    box-sizing: border-box;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
+* { box-sizing: border-box; }
+ 
+ body {
+    font-family: "Lucida Console", Monaco, monospace;
+ }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    font-size: 1.75em;
+ h1 {
     text-align: center;
+    font-size: 1.75rem;
+ }
+ .title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px solid #191970;
+    font-size: 1rem;
+    padding-left:10px;
+    padding-right: 10px;
+
+ }
+
+ #section1, #section2, #section3 {
+    
+    padding: 12px;
+
+ }
+
+ #section1 .content, #section2 .content, #section3 .content {
+    font-size: 1rem;
+    background-color: #778899; 
+    position: relative;
+    border:2px solid #191970;
+    padding: 12px;
+    
+
+
+
+ }
+ 
+#section1 .title {
+    background-color: #20B2AA;
+
 }
 
-section {
-    background-color: #999999;
-    border: 1px solid #000000;
-    margin: 0 0 25px 0;
-    padding: 0;
+#section2 .title {
+    background-color: #B95B37;
 }
 
-section h2 {
-    border-bottom: 1px solid #000000;
-    border-left: 1px solid #000000;
-    margin: 0 0 0 60%;
-    font-size: 1.25em;
-    text-align: center;
-    padding: 2px 0;
-    width: 40%;
+#section3 .title {
+    background-color: #FFA07A;
 }
 
-section p {
-    padding: 0 6px 4px 6px;
+/* desktop  */
+@media only screen and (min-width: 992px) {
+    #section1, #section2, #section3 {
+        display: inline-block;
+        width: 32.5%;
+    } 
 }
 
-#Tea h2 {
-    background-color: #d59898;
-    color: #161616;
-}
+/*tablet*/
+@media only screen and (min-width:768px) and (max-width: 991px) {
+    #section1, #section2, #section3 {
+        display: inline-block;
+    } 
 
-#Coffee h2 {
-    background-color: #c14543;
-    color: #e8e8e8;
-}
-
-#Soda h2 {
-    background-color: #e5d198;
-    color: #161616;
-}
-
-
-
-@media (min-width: 992px) {
-    section {
-        float: left;
-        margin-right: 2.5%;
-        width: 30%;
+    #section1, #section2 {
+        width: 49%;
     }
 
-    #Tea {
-        margin-left: 2.5%;
+    #section3 {
+        width: 100%;
     }
+
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    section {
-        float: left;
-        margin-right: 2.5%;
-        width: 46.25%;
-    }
-    #Tea {
-        margin-left: 2.5%;
-    }
+/*mobile*/
+@media only screen and (max-width: 767px) {
+    #section1, #section2, #section3 {
+        display: inline-block;
+        width: 100%;
+    } 
 
-    #Coffee {
-        clear: left;
-        margin-left: 2.5%;
-        width: 95%;
-    }
-
-    #Soda h2 {
-        margin: 0 0 0 80%;
-        width: 20%;
-    }
-}
-
-@media (max-width: 767px) {
-    section {
-        margin-left: 2.5%;
-        margin-right: 2.5%;
-        width: 95%;
-    }
 }
